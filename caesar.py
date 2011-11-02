@@ -1,9 +1,4 @@
-"""Encrypts and Decrypts using the Caesar Cipher. License: Tell me if you ever use it, but, if you don't its okay, I don't really care."""
-def ctoi(c):
-	return (ord(c.upper())-64)
-
-def itoc(v):
-	return (chr(v+64))
+from general import *
 
 """pt: string to encrypt, plaintext
    si: shift index"""
@@ -30,5 +25,17 @@ def decrypt(et, si):
 	return res
 
 if __name__ == "__main__":
-	print encrypt("I am awesome", 15)
-	print decrypt("ydc", 15)
+	print "Note: Spaces are just ignored"
+
+	print "Enter something to encrypt: "
+	x = raw_input()
+	print "Enter shift: "
+	s = int(raw_input())
+	print "Encrypted: ", encrypt(x, s)
+
+	print "Enter something to decrypt: "
+	x = raw_input()
+	print "Enter shift: "
+	s = int(raw_input())
+	print "Decrypted: ", decrypt(x, s)
+
